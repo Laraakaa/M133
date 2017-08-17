@@ -1,7 +1,8 @@
-<html>
-  <html>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
     <title>Projekt M133</title>
-  </html>
+  </head>
   <body>
     <h1>
       Projekte M133

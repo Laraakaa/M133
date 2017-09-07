@@ -1,0 +1,27 @@
+/* General styles */
+h1 {
+  font-family: sans-serif;
+}
+
+/* Game grid */
+.gameGrid {
+  height: 400px;
+  width: 400px;
+}
+
+.gameGridRow {
+  height: 30%;
+  width: 100%;
+}
+
+.gameGridColumn {
+  height: 100%;
+  width: 30%;
+  float: left;
+  padding: 6px;
+}
+
+.gameGridButton {
+  height: 100%;
+  width: 100%;
+}

@@ -17,6 +17,9 @@
       <li>
         <a href="Lektion_03">Lektion 3</a>
       </li>
+      <li>
+        <a href="TicTacToe">TicTacToe</a>
+      </li>
     </ol>
   </body>
 </html>

@@ -14,6 +14,9 @@
       <li>
         <a href="Lektion_02">Lektion 2</a>
       </li>
+      <li>
+        <a href="Lektion_03">Lektion 3</a>
+      </li>
     </ol>
   </body>
 </html>

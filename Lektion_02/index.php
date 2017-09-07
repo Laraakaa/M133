@@ -5,7 +5,7 @@
     <title>Lektion 2</title>
   </head>
   <body onLoad="countTo100(); verstecken();">
-    <h1>Math mit JavaScript</h1>
+    <h1>Rechnen mit JavaScript</h1>
     <table>
       <tr>
         <th>

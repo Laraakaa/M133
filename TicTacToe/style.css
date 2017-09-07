@@ -1,5 +1,5 @@
 /* General styles */
-h1 {
+body {
   font-family: sans-serif;
 }
 
@@ -24,4 +24,13 @@ h1 {
 .gameGridButton {
   height: 100%;
   width: 100%;
+}
+
+/* Game options */
+.gameOptionsList {
+  list-style: none;
+}
+
+.gameOptionsPlayerList {
+  list-style: none;
 }

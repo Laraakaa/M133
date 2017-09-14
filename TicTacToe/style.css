@@ -34,3 +34,7 @@ body {
 .gameOptionsPlayerList {
   list-style: none;
 }
+
+.emailInvalid {
+  border-color: red;
+}

@@ -3,6 +3,14 @@ body {
   font-family: sans-serif;
 }
 
+.pull-left {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
 /* Game grid */
 .gameGrid {
   height: 400px;
@@ -37,4 +45,12 @@ body {
 
 .emailInvalid {
   border-color: red;
+}
+
+.emailValid {
+  border-color: green;
+}
+
+.actionLogTable {
+  margin-left: 20px;
 }

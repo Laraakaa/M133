@@ -132,13 +132,13 @@ const gameLoop = (clickedElement) => {
   if (winner.isFinished) {
     const newState = getNewState('Finished: ' + winner.text);
     newState.gameEnded = true;
-
+    newState.backAvailable = false;
     pushState(newState);
 
     setStatus(winner.text, 'green');
+  } else {
+    apply(currentState);
   }
-
-  apply(currentState);
 }
 
 const revert = () => {

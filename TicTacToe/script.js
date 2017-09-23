@@ -10,7 +10,8 @@ const initialState = {
     startDisabled: false,
     resetDisabled: true,
     editMode: true,
-    reason: 'Initial'
+    reason: 'Initial',
+    backAvailable: false
   };
 
 // Configuration
@@ -46,7 +47,9 @@ const pushState = (newState) => {
 const uncheckAllCheckboxes = () => $('.optionsRadio').prop('checked', false);
 
 const disableAllInputs = () => $('.optionsInput').prop('disabled', true);
+const enableAllInputs = () => $('.optionsInput').prop('disabled', false);
 const disableAllRadios = () => $('.optionsRadio').prop('disabled', true);
+const enableAllRadios = () => $('.optionsRadio').prop('disabled', false);
 
 const cleanupInputs = (shouldEmpty) => {
   $('.optionsInput').removeClass('emailValid');
@@ -84,6 +87,7 @@ const start = () => {
   newState.startDisabled = true;
   newState.fieldDisabled = false;
   newState.resetDisabled = false;
+  newState.backAvailable = true;
 
   pushState(newState);
 
@@ -104,7 +108,7 @@ const gameLoop = (clickedElement) => {
 
     // Nicht wenn das spiel schon beendet ist
     if (currentState.gameEnded) {
-      setStatus('Diese Aktion ist nicht erlaubt, da das Spiel noch nicht gestartet ist.', 'red');
+      setStatus('Diese Aktion ist nicht erlaubt, da das Spiel bereits beendet ist.', 'red');
       return;
     }
 
@@ -136,6 +140,7 @@ const gameLoop = (clickedElement) => {
 const revert = () => {
   state = state.slice(0, -1);
   gameLoop();
+  $('.actionLog').html(getStateReasons());
 }
 
 const apply = (currentState) => {
@@ -165,10 +170,14 @@ const apply = (currentState) => {
     disableAllInputs();
     disableAllRadios();
     cleanupInputs();
+  } else {
+    enableAllRadios();
+    cleanupInputs(true);
   }
 
   $('#start').prop('disabled', currentState.startDisabled);
   $('#reset').prop('disabled', currentState.resetDisabled);
+  $('#back').prop('disabled', !currentState.backAvailable);
 }
 
 const setStatus = (str, color) => {

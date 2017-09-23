@@ -56,8 +56,6 @@
     </table>
     <div class="clearfix"></div>
 
-    <button onClick="revert()" disabled>Zurück</button>
-
     <div class="gameOptions">
       <h2>Typ des Spieles:</h2>
       <ul class="gameOptionsList">
@@ -88,7 +86,7 @@
       <div class="controlButtons">
         <button id="reset" onClick="reset();" disabled>Reset</button>
         <button id="start" onClick="start();" disabled>Start</button>
-        <button disabled>1 Schritt zurück</button>
+        <button id="back" onClick="revert();">1 Schritt zurück</button>
       </div>
     </div>
 

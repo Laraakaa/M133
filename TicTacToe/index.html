@@ -65,10 +65,10 @@
           <input type="radio" id="radioMenschVsMensch" onClick="selectOption('MvsM')" class="optionsRadio"><label for="radioMenschVsMensch">Mensch vs Mensch</label>
           <ul class="gameOptionsPlayerList">
             <li>
-              <label for="inputPlayerOneMvsM">Spieler 1 (Email):</label><input type="email" value="p1@test.ch" id="inputPlayerOneMvsM" class="optionsInput" onInput="validateEmail('#inputPlayerOneMvsM');" placeholder="Email Spieler 1" disabled>
+              <label for="inputPlayerOneMvsM">Spieler 1 (Email):</label><input type="email" id="inputPlayerOneMvsM" class="optionsInput" onInput="validateEmail('#inputPlayerOneMvsM');" placeholder="Email Spieler 1" disabled>
             </li>
             <li>
-              <label for="inputPlayerTwoMvsM">Spieler 2 (Email):</label><input type="email" value="p2@test.ch" id="inputPlayerTwoMvsM" class="optionsInput" onInput="validateEmail('#inputPlayerTwoMvsM');" placeholder="Email Spieler 2" disabled>
+              <label for="inputPlayerTwoMvsM">Spieler 2 (Email):</label><input type="email" id="inputPlayerTwoMvsM" class="optionsInput" onInput="validateEmail('#inputPlayerTwoMvsM');" placeholder="Email Spieler 2" disabled>
             </li>
           </ul>
         </li>
@@ -76,17 +76,17 @@
           <input type="radio" id="radioMenschVsPC" onClick="selectOption('MvsPC')" class="optionsRadio"><label for="radioMenschVsPC">Mensch vs PC</label>
           <ul class="gameOptionsPlayerList">
             <li>
-              <label for="inputPlayerMvsPC">Spieler (Email):</label><input type="email" id="inputPlayerMvsPC" class="optionsInput" onInput="validateEmail('#inputPlayerMvsPC');" disabled>
+              <label for="inputPlayerMvsPC">Spieler (Email):</label><input type="email" id="inputPlayerMvsPC" class="optionsInput" onInput="validateEmail('#inputPlayerMvsPC');" placeholder="Email Spieler" disabled>
             </li>
           </ul>
         </li>
         <li>
-          <input type="radio" id="radioPCvsPC" onClick="selectOption('PCvsPC')" class="optionsRadio"><label for="radioPCVsPC">PC vs PC</label>
+          <input type="radio" id="radioPCvsPC" onClick="selectOption('PCvsPC')" class="optionsRadio"><label for="radioPCvsPC">PC vs PC</label>
         </li>
       </ul>
       <h3 id="status">Spiel wird geladen...</h3>
       <div class="controlButtons">
-        <button id="reset" disabled>Reset</button>
+        <button id="reset" onClick="reset();" disabled>Reset</button>
         <button id="start" onClick="start();" disabled>Start</button>
         <button disabled>1 Schritt zurück</button>
       </div>

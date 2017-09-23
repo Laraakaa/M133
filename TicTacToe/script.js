@@ -76,7 +76,11 @@ const reset = () => {
 
 const start = () => {
   if (!validate()) {
-    console.log('Validation failed.');
+    return;
+  }
+
+  if (mode !== 'MvsM') {
+    setStatus('Dieser Modus ist gegenwärtig nicht verfügbar.', 'red');
     return;
   }
 
